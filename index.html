@@ -42,16 +42,82 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero-section flex items-center justify-center text-white">
-        <div class="text-center">
+    <section class="hero-section flex items-center justify-center text-white relative h-screen">
+        <!-- SVG Background -->
+        <div class="absolute inset-0">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice" class="w-full h-full">
+                <!-- Sky gradient -->
+                <defs>
+                    <linearGradient id="skyGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                        <stop offset="0%" style="stop-color:#1a365d;stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:#2d3748;stop-opacity:1" />
+                    </linearGradient>
+                    <linearGradient id="mountainGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                        <stop offset="0%" style="stop-color:#4a5568;stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:#2d3748;stop-opacity:1" />
+                    </linearGradient>
+                </defs>
+    
+                <!-- Background -->
+                <rect width="100%" height="100%" fill="url(#skyGradient)" />
+    
+                <!-- Stars -->
+                <g fill="#fff" opacity="0.5">
+                    <circle cx="200" cy="150" r="1" />
+                    <circle cx="400" cy="200" r="1" />
+                    <circle cx="600" cy="100" r="1" />
+                    <circle cx="800" cy="180" r="1" />
+                    <circle cx="1000" cy="120" r="1" />
+                    <circle cx="1200" cy="160" r="1" />
+                    <circle cx="1400" cy="140" r="1" />
+                    <circle cx="1600" cy="190" r="1" />
+                </g>
+    
+                <!-- Moon -->
+                <circle cx="1600" cy="200" r="60" fill="#fff" opacity="0.8" />
+    
+                <!-- Mountains in background -->
+                <path
+                    d="M0 500 L400 200 L800 450 L1200 180 L1600 400 L1920 300 L1920 1080 L0 1080 Z"
+                    fill="url(#mountainGradient)" opacity="0.7" />
+    
+                <!-- Closer mountains -->
+                <path
+                    d="M0 600 L500 300 L1000 550 L1500 280 L1920 500 L1920 1080 L0 1080 Z"
+                    fill="#2d3748" opacity="0.8" />
+    
+                <!-- Silhouettes of trees -->
+                <g fill="#1a202c">
+                    <path d="M300 800 L330 800 L315 700 Z" />
+                    <path d="M320 780 L350 780 L335 680 Z" />
+                    <path d="M800 820 L830 820 L815 720 Z" />
+                    <path d="M1400 810 L1430 810 L1415 710 Z" />
+                </g>
+    
+                <!-- Wildlife silhouettes -->
+                <path
+                    d="M1200 800 C1200 800 1220 780 1240 780 C1260 780 1280 790 1290 800 C1300 810 1310 820 1300 830 C1290 840 1270 850 1250 850 C1230 850 1210 840 1200 830 Z"
+                    fill="#000" opacity="0.6" />
+    
+                <!-- Birds in flight -->
+                <g fill="#000" opacity="0.5">
+                    <path d="M500 300 L520 290 L540 300 L520 310 Z" />
+                    <path d="M550 280 L570 270 L590 280 L570 290 Z" />
+                    <path d="M1100 250 L1120 240 L1140 250 L1120 260 Z" />
+                </g>
+            </svg>
+        </div>
+    
+        <!-- Content -->
+        <div class="text-center z-10">
             <h1 class="text-5xl font-bold mb-4">Revolutionizing Wildlife Conservation with AI-Powered Insights</h1>
             <p class="text-xl mb-8">Monitor biodiversity effortlessly. Empower conservation decisions with real-time data.</p>
             <button class="bg-green-600 text-white px-8 py-3 rounded-full text-lg hover:bg-green-700">
                 Purchase Now
             </button>
         </div>
-    </section>
-
+    </section>  
+    
     <!-- Features Section -->
     <section id="features" class="py-20 bg-white">
         <div class="container mx-auto px-6">
