@@ -20,6 +20,21 @@
         
         .feature-card:hover {
             transform: translateY(-5px);
+
+            .hero-about {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+                        url('/api/placeholder/1920/1080') center/cover;
+            height: 60vh;
+        }
+        
+        .nature-gradient {
+            background: linear-gradient(135deg, #2F855A, #276749);
+        }
+        
+        .paw-list li {
+            list-style-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='%232F855A'%3E%3Cpath d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z'%3E%3C/path%3E%3C/svg%3E");
+            padding-left: 8px;
+        }
         }
     </style>
 </head>
@@ -30,7 +45,7 @@
             <div class="flex justify-between items-center">
                 <div class="text-2xl font-bold text-green-700">ConservaCam</div>
                 <div class="hidden md:flex space-x-8">
-                    <a href="about.html" class="text-gray-700 hover:text-green-600">About</a>
+                    <a href="#about" class="text-gray-700 hover:text-green-600">About</a>
                     <a href="#features" class="text-gray-700 hover:text-green-600">Features</a>
                     <a href="#hardware" class="text-gray-700 hover:text-green-600">Hardware</a>
                     <a href="#contact" class="text-gray-700 hover:text-green-600">Contact</a>
@@ -118,7 +133,145 @@
             </button>
         </div>
     </section>  
+
+    <section id="about" class="hero-about flex items-center justify-center text-white h-64 relative">
+        <!-- SVG Background -->
+        <div class="absolute inset-0">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 400" preserveAspectRatio="xMidYMid slice" class="w-full h-full">
+                <!-- Background gradient -->
+                <defs>
+                    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                        <stop offset="0%" style="stop-color:#276749;stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:#22543d;stop-opacity:1" />
+                    </linearGradient>
+                </defs>
     
+                <!-- Background -->
+                <rect width="100%" height="100%" fill="url(#bgGradient)" />
+    
+                <!-- Abstract pattern -->
+                <g fill="#fff" opacity="0.05">
+                    <circle cx="200" cy="200" r="100" />
+                    <circle cx="600" cy="100" r="80" />
+                    <circle cx="1000" cy="300" r="120" />
+                    <circle cx="1400" cy="150" r="90" />
+                    <circle cx="1800" cy="250" r="110" />
+                </g>
+    
+                <!-- Wildlife silhouettes -->
+                <!-- Giraffe -->
+                <path d="M200 300 L220 200 L240 180 L260 200 L280 300"
+                    stroke="#000" fill="none" stroke-width="2" opacity="0.2" />
+    
+                <!-- Lion -->
+                <path d="M600 280 Q620 260 640 280 Q660 300 680 280"
+                    stroke="#000" fill="none" stroke-width="2" opacity="0.2" />
+    
+                <!-- Zebra -->
+                <path d="M1000 290 L1040 290 L1060 270 L1080 290"
+                    stroke="#000" fill="none" stroke-width="2" opacity="0.2" />
+    
+                <!-- Camera icons -->
+                <g fill="#fff" opacity="0.1">
+                    <rect x="400" y="150" width="40" height="30" rx="5" />
+                    <circle cx="420" cy="165" r="10" />
+                    <rect x="1200" y="200" width="40" height="30" rx="5" />
+                    <circle cx="1220" cy="215" r="10" />
+                </g>
+            </svg>
+        </div>
+    
+        <!-- Content -->
+        <div class="text-center max-w-3xl mx-auto z-10">
+            <h1 class="text-5xl font-bold mb-4">What is ConservaCam?</h1>
+        </div>
+    </section>       
+
+    <!-- What is ConservaCam Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <!-- Heading -->
+            <h2 class="text-4xl font-bold text-center text-gray-800 mb-16">
+                The Future of Wildlife Monitoring
+            </h2>
+
+            <!-- Content Grid -->
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <!-- Text Section -->
+                <div>
+                    <p class="text-lg text-gray-700 mb-6">
+                        ConservaCam combines motion-sensing hardware and AI-driven software to capture, analyze, and transmit biodiversity data. 
+                        Our system identifies individual animals, tracks behaviors, and provides actionable insights to support conservation efforts.
+                    </p>
+                    <ul class="space-y-4">
+                        <li class="flex items-center text-green-700">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 5c-1.105 0-2 .895-2 2s.895 2 2 2 2-.895 2-2-.895-2-2-2zm-5 6c-1.105 0-2 .895-2 2s.895 2 2 2 2-.895 2-2-.895-2-2-2zm10 0c-1.105 0-2 .895-2 2s.895 2 2 2 2-.895 2-2-.895-2-2-2zm-10-6c-.941 0-1.71.659-1.949 1.56-.237.895.17 1.804.974 2.24s1.804-.17 2.24-.974c.438-.803.332-1.874-.264-2.46-.542-.54-1.2-.366-1.586-.366zm5-2c-1.105 0-2 .895-2 2s.895 2 2 2 2-.895 2-2-.895-2-2-2zm5.949 3.56c-.272-.89-.932-1.56-1.949-1.56-.385 0-1.043-.174-1.586.366-.596.586-.702 1.657-.264 2.46.436.803 1.345 1.211 2.24.974.803-.437 1.211-1.345.974-2.24zm-11.89 6.897c-.596.586-.702 1.657-.264 2.46.436.803 1.345 1.211 2.24.974.803-.437 1.211-1.345.974-2.24-.24-.9-.934-1.56-1.949-1.56s-1.709.66-1.949 1.56zm11.89 0c-.596.586-.702 1.657-.264 2.46.437.803 1.345 1.211 2.24.974.803-.437 1.211-1.345.974-2.24-.24-.9-.934-1.56-1.949-1.56s-1.709.66-1.949 1.56z"/>
+                            </svg>
+                            <span>AI-powered animal identification</span>
+                        </li>
+                        <li class="flex items-center text-green-700">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 5c-1.105 0-2 .895-2 2s.895 2 2 2 2-.895 2-2-.895-2-2-2zm-5 6c-1.105 0-2 .895-2 2s.895 2 2 2 2-.895 2-2-.895-2-2-2zm10 0c-1.105 0-2 .895-2 2s.895 2 2 2 2-.895 2-2-.895-2-2-2zm-10-6c-.941 0-1.71.659-1.949 1.56-.237.895.17 1.804.974 2.24s1.804-.17 2.24-.974c.438-.803.332-1.874-.264-2.46-.542-.54-1.2-.366-1.586-.366zm5-2c-1.105 0-2 .895-2 2s.895 2 2 2 2-.895 2-2-.895-2-2-2zm5.949 3.56c-.272-.89-.932-1.56-1.949-1.56-.385 0-1.043-.174-1.586.366-.596.586-.702 1.657-.264 2.46.436.803 1.345 1.211 2.24.974.803-.437 1.211-1.345.974-2.24zm-11.89 6.897c-.596.586-.702 1.657-.264 2.46.436.803 1.345 1.211 2.24.974.803-.437 1.211-1.345.974-2.24-.24-.9-.934-1.56-1.949-1.56s-1.709.66-1.949 1.56zm11.89 0c-.596.586-.702 1.657-.264 2.46.437.803 1.345 1.211 2.24.974.803-.437 1.211-1.345.974-2.24-.24-.9-.934-1.56-1.949-1.56s-1.709.66-1.949 1.56z"/>
+                            </svg>
+                            <span>Real-time behavior tracking</span>
+                        </li>
+                        <li class="flex items-center text-green-700">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 5c-1.105 0-2 .895-2 2s.895 2 2 2 2-.895 2-2-.895-2-2-2zm-5 6c-1.105 0-2 .895-2 2s.895 2 2 2 2-.895 2-2-.895-2-2-2zm10 0c-1.105 0-2 .895-2 2s.895 2 2 2 2-.895 2-2-.895-2-2-2zm-10-6c-.941 0-1.71.659-1.949 1.56-.237.895.17 1.804.974 2.24s1.804-.17 2.24-.974c.438-.803.332-1.874-.264-2.46-.542-.54-1.2-.366-1.586-.366zm5-2c-1.105 0-2 .895-2 2s.895 2 2 2 2-.895 2-2-.895-2-2-2zm5.949 3.56c-.272-.89-.932-1.56-1.949-1.56-.385 0-1.043-.174-1.586.366-.596.586-.702 1.657-.264 2.46.436.803 1.345 1.211 2.24.974.803-.437 1.211-1.345.974-2.24zm-11.89 6.897c-.596.586-.702 1.657-.264 2.46.436.803 1.345 1.211 2.24.974.803-.437 1.211-1.345.974-2.24-.24-.9-.934-1.56-1.949-1.56s-1.709.66-1.949 1.56zm11.89 0c-.596.586-.702 1.657-.264 2.46.437.803 1.345 1.211 2.24.974.803-.437 1.211-1.345.974-2.24-.24-.9-.934-1.56-1.949-1.56s-1.709.66-1.949 1.56z"/>
+                            </svg>
+                            <span>Comprehensive data analysis</span>
+                        </li>
+                    </ul>
+                    
+                </div>
+
+                <!-- Image Section -->
+                <div class="relative">
+                    <img 
+                        src="https://images.pexels.com/photos/847393/pexels-photo-847393.jpeg?auto=compress&cs=tinysrgb&w=600" 
+                        alt="Wildlife Monitoring" 
+                        class="rounded-lg shadow-lg"
+                    />
+                    <!-- Floating Metric Box -->
+                    <div class="absolute -bottom-6 -right-6 bg-green-600 text-white p-4 rounded-lg shadow-lg">
+                        <p class="text-xl font-bold">1000+</p>
+                        <p class="text-sm">Species Monitored</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>   
+
+     <!-- Mission and Vision Section -->
+     <section id="mission" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-4xl font-bold mb-16">Our Purpose and Aspirations</h2>
+                <div class="grid md:grid-cols-2 gap-12">
+                    <div class="bg-white p-8 rounded-lg shadow-lg">
+                        <div class="text-green-600 text-4xl mb-4">
+                            <i class="fas fa-bullseye"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4">Our Mission</h3>
+                        <p class="text-gray-700">
+                            To empower conservancies with advanced tools for monitoring, understanding, and protecting biodiversity.
+                        </p>
+                    </div>
+                    <div class="bg-white p-8 rounded-lg shadow-lg">
+                        <div class="text-green-600 text-4xl mb-4">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4">Our Vision</h3>
+                        <p class="text-gray-700">
+                            A world where technology harmonizes with nature to preserve ecosystems for future generations.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+       
     <!-- Features Section -->
     <section id="features" class="py-20 bg-white">
         <div class="container mx-auto px-6">
@@ -272,7 +425,92 @@
     </div>
 </section>
 
+        <!-- Section Component -->
+<section class="relative bg-white py-16">
+    <div class="absolute inset-0">
+        <div class="bg-white h-1/3 sm:h-2/3"></div>
+    </div>
+    
+    <!-- Container for max width and padding -->
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Software Capabilities Content -->
+        <div class="text-center">
+            <p class="text-4xl font-bold text-center mb-16">Software Capabilities</p>
+            <h2 class="mt-2 text-3xl font-bold text-gray-900 sm:text-4xl mb-16">
+                AI-Powered Insights at Your Fingertips
+            </h2>
+        </div>
 
+        <!-- Capabilities Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+            <!-- Animal Identification -->
+            <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                    <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+                    </svg>
+                </div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-2">Animal Identification</h3>
+                <p class="text-gray-600">AI trained on thousands of species</p>
+            </div>
+
+            <!-- Behavior Analysis -->
+            <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
+                    <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                    </svg>
+                </div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-2">Behavior Analysis</h3>
+                <p class="text-gray-600">Real-time tracking and behavior patterns</p>
+            </div>
+
+            <!-- Data Visualization -->
+            <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
+                    <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 13v-1m4 1v-3m4 3V8M12 21l9-9-9-9-9 9 9 9z"></path>
+                    </svg>
+                </div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-2">Data Visualization</h3>
+                <p class="text-gray-600">Intuitive dashboards</p>
+            </div>
+
+            <!-- Cloud Integration -->
+            <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                <div class="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-4">
+                    <svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"></path>
+                    </svg>
+                </div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-2">Cloud Integration</h3>
+                <p class="text-gray-600">Secure, remote data accessibility</p>
+            </div>
+        </div>
+
+        <!-- Software Interface Preview -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+            <div class="bg-gray-100 rounded-lg p-4 aspect-video">
+                <div class="w-full h-full flex items-center justify-center text-gray-400">
+                    <span>Software Interface Screenshot</span>
+                </div>
+            </div>
+            <div class="bg-gray-100 rounded-lg p-4 aspect-video">
+                <div class="w-full h-full flex items-center justify-center text-gray-400">
+                    <span>Data Flow Infographic</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- CTA Button -->
+        <div class="text-center">
+            <a href="#" class="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+                Explore Software Capabilities
+            </a>
+        </div>
+    </div>
+</section>        
 
     <!-- Contact Section -->
     <section id="contact" class="py-20 bg-white">
@@ -372,6 +610,18 @@
             </div>
         </div>
     </section>
+
+    <!-- Final Call to Action -->
+    <section class="py-20 bg-gradient-to-r from-green-600 via-green-500 to-green-700 text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-4xl font-bold mb-8">Be the eyes nature needs</h2>
+            <p class="text-xl mb-8">Equip your conservancy with ConservaCam and uncover the stories in the wild.</p>
+            <button class="bg-green-100 text-green-800 px-8 py-3 rounded-full hover:bg-green-200 transition-colors duration-300">
+                <a href="auth.html" class="block">Get Started Now</a>
+            </button>
+        </div>
+    </section>
+
 
     <!-- Footer -->
     <footer class="bg-gray-800 text-white py-12">
